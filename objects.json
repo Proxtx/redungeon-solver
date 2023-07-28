@@ -1,0 +1,146 @@
+{
+  "spikes": {
+    "spikes_default": ["spikes_1"],
+    "spikes_animation": [
+      "spikes_1",
+      "spikes_2",
+      "spikes_3",
+      "spikes_4",
+      "spikes_5"
+    ],
+    "grill_default": ["grill_tile_h", "grill_tile_v"],
+    "grill_animation": ["grill_tile_burn_1", "grill_tile_burn_2"],
+    "grill_burn_animation": [
+      "grill_burn_1",
+      "grill_burn_2",
+      "grill_burn_3",
+      "grill_burn_4"
+    ],
+    "grill_ignite_animation": [
+      "grill_ignite_1",
+      "grill_ignite_2",
+      "grill_ignite_3"
+    ]
+  },
+  "floor": {
+    "default": [
+      "dungeon_floor_1",
+      "dungeon_floor_2",
+      "dungeon_floor_3",
+      "dungeon_floor_4",
+      "dungeon_floor_5",
+      "dungeon_floor_6",
+      "dungeon_floor_7"
+    ],
+    "animation": [],
+    "pit_wall": "dungeon_pit_wall"
+  },
+  "ice": {
+    "default": ["ice_tile_1"],
+    "animation": [
+      "ice_tile_1",
+      "ice_tile_2",
+      "ice_tile_3",
+      "ice_tile_4",
+      "ice_tile_5"
+    ]
+  },
+  "wall": {
+    "default": ["dungeon_wall_1"],
+    "animation": [],
+    "pit_wall": "dungeon_pit_wall"
+  },
+  "coinGold": {
+    "default": ["coin_gold_1"],
+    "animation": [
+      "coin_gold_1",
+      "coin_gold_2",
+      "coin_gold_3",
+      "coin_gold_4",
+      "coin_gold_5",
+      "coin_gold_6"
+    ]
+  },
+  "coinGreen": {
+    "default": ["coin_green_1"],
+    "animation": [
+      "coin_green_1",
+      "coin_green_2",
+      "coin_green_3",
+      "coin_green_4",
+      "coin_green_5",
+      "coin_green_6"
+    ]
+  },
+  "coinBlue": {
+    "default": ["coin_blue_1"],
+    "animation": [
+      "coin_blue_1",
+      "coin_blue_2",
+      "coin_blue_3",
+      "coin_blue_4",
+      "coin_blue_5",
+      "coin_blue_6"
+    ]
+  },
+  "coinRed": {
+    "default": ["coin_red_1"],
+    "animation": [
+      "coin_red_1",
+      "coin_red_2",
+      "coin_red_3",
+      "coin_red_4",
+      "coin_red_5",
+      "coin_red_6"
+    ]
+  },
+  "pot": {
+    "default": ["pot"],
+    "animation": [],
+    "cracked": ["pot_cracked"]
+  },
+  "crossbow": {
+    "default": ["crossbow_1"],
+    "animation": [
+      "crossbow_1",
+      "crossbow_2",
+      "crossbow_3",
+      "crossbow_4",
+      "crossbow_5"
+    ]
+  },
+  "chest": {
+    "goldDefault": ["chest_1"],
+    "goldAnimation": ["chest_1", "chest_2", "chest_3", "chest_4"],
+    "treasureDefault": ["chest_treasure_1"],
+    "treasureAnimation": [
+      "chest_treasure_1",
+      "chest_treasure_2",
+      "chest_treasure_3",
+      "chest_treasure_4"
+    ],
+    "woodDefault": ["chest_wood_1"],
+    "woodAnimation": [
+      "chest_wood_1",
+      "chest_wood_2",
+      "chest_wood_3",
+      "chest_wood_4"
+    ]
+  },
+  "web": {
+    "default": ["spider_web_1", "spider_web_2", "spider_web_3"],
+    "animation": []
+  },
+  "piston": {
+    "defaultPadE": ["piston_pad_e"],
+    "defaultPadN": ["piston_pad_n"],
+    "defaultPadS": ["piston_pad_s"],
+    "defaultPadW": ["piston_pad_w"],
+    "pistonRodEW": ["piston_rod_ew"],
+    "pistonRodNS": ["piston_rod_ns"]
+  },
+  "slime": {
+    "default": ["slime_1"],
+    "animation": ["slime_1", "slime_2", "slime_3"]
+  }
+}
