@@ -1,5 +1,4 @@
-import {createAppropriateTileBaseRenderer} from "./tileBaseRenderer.js";
-//import 
+import { createAppropriateTileBaseRenderer } from "./tileBaseRenderer.js";
 
 export class TileRenderer {
   constructor(ctx, tile, tileSize, camera) {
@@ -7,11 +6,15 @@ export class TileRenderer {
     this.tile = tile;
     this.tileSize = tileSize;
     this.camera = camera;
-    this.tileBaseRenderer = createAppropriateTileBaseRenderer(this.ctx, this.tile, this.tileSize, this.camera); 
+    this.tileBaseRenderer = createAppropriateTileBaseRenderer(
+      this.ctx,
+      this.tile,
+      this.tileSize,
+      this.camera
+    );
   }
-  
-  render () {
+
+  render() {
     this.tileBaseRenderer.render();
   }
-  
 }

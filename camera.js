@@ -1,5 +1,5 @@
 export class Camera {
-  construcor(ctx, position) {
+  constructor(ctx, position) {
     this.ctx = ctx;
     this.position = position;
   }
