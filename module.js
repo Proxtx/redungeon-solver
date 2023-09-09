@@ -25,7 +25,7 @@ export class Module {
           new Tile(
             this,
             this.data.tiles[y * this.width + x],
-            new Position(x, y)
+            new Position(x, y, this.position)
           )
         );
       }

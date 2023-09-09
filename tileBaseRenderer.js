@@ -15,8 +15,8 @@ export class TileBaseRenderer {
 
   getAbsolutePosition() {
     return [
-      this.tile.position.x + this.tile.module.position.x,
-      this.tile.position.y + this.tile.module.position.y,
+      this.tile.position.x * this.tileSize + this.tile.position.relative.x,
+      this.tile.position.y * this.tileSize + this.tile.position.relative.y,
     ];
   }
 }
@@ -44,9 +44,21 @@ class TileBaseRendererFloor extends TileBaseRenderer {
 }
 
 class TileBaseRendererIce extends TileBaseRenderer {
-  init() {}
+  init() {
+    this.sprite = randomArrayEntry(atlas.getObject("ice").default);
+  }
 
-  render() {}
+  render() {
+    let pos = this.getAbsolutePosition();
+    renderSprite(
+      this.ctx,
+      this.sprite,
+      this.tileSize,
+      pos[0],
+      pos[1],
+      this.camera
+    );
+  }
 }
 
 const classTypeAssociation = {

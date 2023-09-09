@@ -10,13 +10,13 @@ export const renderSprite = (ctx, sprite, tileSize, x, y, camera) => {
   let scale = tileSize / 17;
   ctx.drawImage(
     atlas.img,
+    spriteData.x,
+    spriteData.y,
+    spriteData["full-width"],
+    spriteData["full-height"],
     x - camera.position.x,
     y - camera.position.y,
-    sprite.width * scale,
-    sprite.height * scale,
-    sprite.x,
-    sprite.y,
-    sprite["full-width"],
-    sprite["full-height"]
+    spriteData.width * scale,
+    spriteData.height * scale
   );
 };

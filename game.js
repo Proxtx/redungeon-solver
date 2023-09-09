@@ -13,11 +13,7 @@ export class Game {
   createTestingModule() {
     let matchingModules = modules.getMatchingModules(["floor", "pit", "ice"]);
     this.modules.push(
-      new Module(
-        this,
-        randomArrayEntry(matchingModules),
-        new Position(this, 0, 0)
-      )
+      new Module(this, randomArrayEntry(matchingModules), new Position(0, 0))
     );
   }
 }

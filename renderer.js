@@ -7,7 +7,7 @@ export class Renderer {
     this.ctx = ctx;
     this.game = game;
     this.tileSize = tileSize;
-    this.camera = new Camera(this.ctx, new Position(this.game, 0, 0));
+    this.camera = new Camera(this.ctx, new Position(0, 0));
   }
 
   render() {

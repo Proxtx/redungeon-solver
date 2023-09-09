@@ -1,6 +1,5 @@
 export class Position {
-  constructor(game, x, y, relative = null) {
-    this.game = game;
+  constructor(x, y, relative = null) {
     this.x = x;
     this.y = y;
     this.relative = relative;

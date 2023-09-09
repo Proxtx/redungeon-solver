@@ -10,7 +10,6 @@ export class ModuleRenderer {
   }
 
   createTileRenderers() {
-    console.log(this.module.tiles);
     for (let tileRow of this.module.tiles) {
       for (let tile of tileRow) {
         tile.renderer = new TileRenderer(
