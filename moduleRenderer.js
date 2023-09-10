@@ -25,7 +25,14 @@ export class ModuleRenderer {
   render() {
     for (let tileRow of this.module.tiles) {
       for (let tile of tileRow) {
-        tile.renderer.render();
+        tile.renderer.tileBaseRenderer.render();
+      }
+    }
+
+    for (let tileRow of this.module.tiles) {
+      for (let tile of tileRow) {
+        if (tile.renderer.elementRenderer)
+          tile.renderer.elementRenderer.render();
       }
     }
   }

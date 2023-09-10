@@ -28,6 +28,7 @@ class TileBaseRendererPit extends TileBaseRenderer {
 class TileBaseRendererFloor extends TileBaseRenderer {
   init() {
     this.sprite = randomArrayEntry(atlas.getObject("floor").default);
+    this.wallSprite = atlas.getObject("floor").pit_wall;
   }
 
   render() {
@@ -38,6 +39,15 @@ class TileBaseRendererFloor extends TileBaseRenderer {
       this.tileSize,
       pos[0],
       pos[1],
+      this.camera
+    );
+
+    renderSprite(
+      this.ctx,
+      this.wallSprite,
+      this.tileSize,
+      pos[0],
+      pos[1] + this.tileSize,
       this.camera
     );
   }
@@ -61,10 +71,39 @@ class TileBaseRendererIce extends TileBaseRenderer {
   }
 }
 
+class TileBaseRendererWall extends TileBaseRenderer {
+  init() {
+    this.sprite = randomArrayEntry(atlas.getObject("wall").default);
+    this.wallSprite = atlas.getObject("floor").pit_wall;
+  }
+
+  render() {
+    let pos = this.getAbsolutePosition();
+    renderSprite(
+      this.ctx,
+      this.sprite,
+      this.tileSize,
+      pos[0],
+      pos[1],
+      this.camera
+    );
+
+    renderSprite(
+      this.ctx,
+      this.wallSprite,
+      this.tileSize,
+      pos[0],
+      pos[1] + this.tileSize,
+      this.camera
+    );
+  }
+}
+
 const classTypeAssociation = {
   floor: TileBaseRendererFloor,
   pit: TileBaseRendererPit,
   ice: TileBaseRendererIce,
+  wall: TileBaseRendererWall,
 };
 
 export const createAppropriateTileBaseRenderer = (

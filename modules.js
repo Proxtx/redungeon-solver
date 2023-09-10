@@ -10,20 +10,31 @@ class Modules {
     this.allModules = this.startingModules.concat(this.corridorModules);
   }
 
-  getMatchingModules(match) {
+  getMatchingModules(enabled, match = []) {
     let modules = [];
 
     for (let module of this.allModules) {
-      if (this.matchModule(module, match)) modules.push(module);
+      if (this.matchModule(module, enabled, match)) modules.push(module);
     }
 
     return modules;
   }
 
-  matchModule(module, match) {
+  matchModule(module, enabled, match = []) {
     for (let tile of module.tiles) {
-      if (tile.element) if (!match.includes(tile.element.type)) return false;
-      if (!match.includes(tile.type)) return false;
+      if (tile.element) if (!enabled.includes(tile.element.type)) return false;
+      if (!enabled.includes(tile.type)) return false;
+    }
+
+    let existed = {};
+
+    for (let tile of module.tiles) {
+      existed[tile.type] = true;
+      if (tile.element) existed[tile.element.type] = true;
+    }
+
+    for (let must of match) {
+      if (!existed[match]) return false;
     }
 
     return true;

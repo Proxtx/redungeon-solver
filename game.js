@@ -11,7 +11,10 @@ export class Game {
   }
 
   createTestingModule() {
-    let matchingModules = modules.getMatchingModules(["floor", "pit", "ice"]);
+    let matchingModules = modules.getMatchingModules(
+      ["floor", "pit", "ice", "wall", "loot", "web", "pot"],
+      []
+    );
     this.modules.push(
       new Module(this, randomArrayEntry(matchingModules), new Position(0, 0))
     );
