@@ -12,7 +12,7 @@ export class Game {
 
   createTestingModule() {
     let matchingModules = modules.getMatchingModules(
-      ["floor", "pit", "ice", "wall", "loot", "web", "pot"],
+      ["floor", "pit", "ice", "wall", "web", "pot"],
       []
     );
     this.modules.push(

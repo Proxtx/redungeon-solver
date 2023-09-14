@@ -9,8 +9,6 @@ export class Element {
   init() {}
 }
 
-export class ElementLoot extends Element {}
-
 export class ElementWeb extends Element {}
 
 export class ElementPot extends Element {
@@ -21,7 +19,6 @@ export class ElementPot extends Element {
 }
 
 const classTypeAssociation = {
-  loot: ElementLoot,
   web: ElementWeb,
   pot: ElementPot,
 };

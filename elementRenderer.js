@@ -19,24 +19,6 @@ export class ElementRenderer {
   }
 }
 
-class ElementRendererLoot extends ElementRenderer {
-  init() {
-    this.sprite = randomArrayEntry(atlas.getObject("coinGold").default);
-  }
-
-  render() {
-    let pos = this.getAbsolutePosition();
-    renderSprite(
-      this.ctx,
-      this.sprite,
-      this.tileSize,
-      pos[0],
-      pos[1],
-      this.camera
-    );
-  }
-}
-
 class ElementRendererWeb extends ElementRenderer {
   init() {
     this.sprite = randomArrayEntry(atlas.getObject("web").default);
@@ -68,7 +50,6 @@ class ElementRendererPot extends ElementRenderer {
 }
 
 const classTypeAssociation = {
-  loot: ElementRendererLoot,
   web: ElementRendererWeb,
   pot: ElementRendererPot,
 };
